@@ -7,6 +7,7 @@ class Produto(models.Model):
     produto_valor = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     produto_estoque = models.IntegerField(default = 1)
     produto_avaliacao = models.IntegerField(default = 1)
+    produto_garantia = models.CharField(max_length=80, default='1 ano')
 
     def __str__(self):
         return self.produto_nome
